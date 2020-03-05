@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <h3>to do</h3>
 
 <form method="POST" action="/">
@@ -7,7 +9,8 @@
 
 {% for task in tasks %}
 <div>
-    <a href="{% url 'update_task' task.id %}">update</a>
+    <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
+    <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
     <p>{{task}}</p>
 </div>
 {% endfor %}
